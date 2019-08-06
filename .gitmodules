@@ -16,3 +16,6 @@
 [submodule "roles/php_pgsql"]
 	path = roles/php_pgsql
 	url = git@github.com:geerlingguy/ansible-role-php-pgsql.git
+[submodule "roles/php_redis"]
+	path = roles/php_redis
+	url = git@github.com:geerlingguy/ansible-role-php-redis.git
