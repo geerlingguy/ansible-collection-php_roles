@@ -13,3 +13,6 @@
 [submodule "roles/php_pecl"]
 	path = roles/php_pecl
 	url = git@github.com:geerlingguy/ansible-role-php-pecl.git
+[submodule "roles/php_pgsql"]
+	path = roles/php_pgsql
+	url = git@github.com:geerlingguy/ansible-role-php-pgsql.git
