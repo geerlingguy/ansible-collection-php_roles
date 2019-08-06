@@ -32,6 +32,14 @@ To build a local test environment and run the tests, run the following command:
 
     TODO.
 
+### Pushing a new version
+
+Currently the process of building and pushing a new version artifact to Galaxy is manual. This process will be automated based on tags/releases via Travis CI soon, but for now, here is how to release a new version:
+
+  1. Make sure the `version` string in `galaxy.yml` matches the version of the collection you wish to publish (should correspond to the latest Git tag).
+  2. Build the collection artifact: `ansible-galaxy collection build geerlingguy.php`
+  3. Publish the collection artifact: `ansible-galaxy collection publish ./geerlingguy-php-1.2.3.tar.gz --api-key=[key goes here]`
+
 ## Author
 
 This collection was created in 2019 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/) and [Ansible for Kubernetes](https://www.ansibleforkubernetes.com).
