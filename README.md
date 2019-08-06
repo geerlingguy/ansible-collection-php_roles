@@ -1,6 +1,6 @@
-# PHP Collection for Ansible
+# PHP Roles Collection for Ansible
 
-This collection is an aggregation of all the PHP-related roles maintained by Jeff Geerling (geerlingguy).
+This collection contains all the PHP-related roles maintained by Jeff Geerling (geerlingguy).
 
 It includes:
 
@@ -39,6 +39,8 @@ Currently the process of building and pushing a new version artifact to Galaxy i
   1. Make sure the `version` string in `galaxy.yml` matches the version of the collection you wish to publish (should correspond to the latest Git tag).
   2. Build the collection artifact: `ansible-galaxy collection build geerlingguy.php`
   3. Publish the collection artifact: `ansible-galaxy collection publish ./geerlingguy-php-1.2.3.tar.gz --api-key=[key goes here]`
+
+> Note: The above commands require Ansible 2.9 (Ansible's `devel` branch as of mid-2019) or later.
 
 ## Author
 

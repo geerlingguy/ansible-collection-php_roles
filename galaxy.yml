@@ -1,7 +1,8 @@
 ---
 namespace: geerlingguy
-name: php
-version: "0.9.0"
+name: php_roles
+description: An elegant collection of roles for PHP automation.
+version: "0.9.1"
 readme: README.md
 authors:
   - geerlingguy (https://www.jeffgeerling.com/)
@@ -19,8 +20,12 @@ tags:
   - ubuntu
   - centos
   - amazon_linux
+  - az_linux
   - rhel
   - fedora
+  - drupal
+  - wordpress
+  - laravel
 repository: https://github.com/geerlingguy/ansible-collection-php
 documentation: https://github.com/geerlingguy/ansible-collection-php
 # homepage: ""
