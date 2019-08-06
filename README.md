@@ -18,7 +18,25 @@ It includes:
 
 ## Usage
 
-TODO.
+Install this collection locally:
+
+    ansible-galaxy collection install geerlingguy.php_roles -p ./collections
+
+Then you can use the roles from the collection in your playbooks:
+
+    ---
+    - hosts: all
+    
+      collections:
+        - geerlingguy.php_roles
+    
+      roles:
+        - php
+        - role: php-versions
+          vars:
+            php_version: '7.3'
+
+> If you want to be more explicit, you can use the fully-qualified role name when referring to a role in this collection, like `geerlingguy.php_roles.php` instead of just `php`. This could be helpful if, for example, you maintain a separate `php` role in another place on your local workstation.
 
 ## Development
 
