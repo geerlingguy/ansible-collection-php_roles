@@ -22,3 +22,6 @@
 [submodule "roles/php_tideways"]
 	path = roles/php_tideways
 	url = git@github.com:geerlingguy/ansible-role-php-tideways.git
+[submodule "roles/php_versions"]
+	path = roles/php_versions
+	url = git@github.com:geerlingguy/ansible-role-php-versions.git
