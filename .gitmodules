@@ -28,3 +28,6 @@
 [submodule "roles/php_xdebug"]
 	path = roles/php_xdebug
 	url = git@github.com:geerlingguy/ansible-role-php-xdebug.git
+[submodule "roles/php_xhprof"]
+	path = roles/php_xhprof
+	url = git@github.com:geerlingguy/ansible-role-php-xhprof.git
