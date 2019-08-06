@@ -1,3 +1,6 @@
 [submodule "roles/php"]
 	path = roles/php
 	url = git@github.com:geerlingguy/ansible-role-php.git
+[submodule "roles/php_memcached"]
+	path = roles/php_memcached
+	url = git@github.com:geerlingguy/ansible-role-php-memcached.git
