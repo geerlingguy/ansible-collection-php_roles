@@ -1,0 +1,27 @@
+---
+namespace: geerlingguy
+name: php
+version: "1.0.0"
+readme: README.md
+authors:
+  - geerlingguy (https://www.jeffgeerling.com/)
+dependencies: []
+license:
+  - MIT
+tags:
+  - php
+  - apache
+  - lamp
+  - lemp
+  - nginx
+  - apache
+  - debian
+  - ubuntu
+  - centos
+  - amazon_linux
+  - rhel
+  - fedora
+repository: https://github.com/geerlingguy/ansible-collection-php
+documentation: https://github.com/geerlingguy/ansible-collection-php
+# homepage: ""
+issues: https://github.com/geerlingguy/ansible-collection-php/issues
