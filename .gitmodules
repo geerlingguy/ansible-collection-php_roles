@@ -25,3 +25,6 @@
 [submodule "roles/php_versions"]
 	path = roles/php_versions
 	url = git@github.com:geerlingguy/ansible-role-php-versions.git
+[submodule "roles/php_xdebug"]
+	path = roles/php_xdebug
+	url = git@github.com:geerlingguy/ansible-role-php-xdebug.git
