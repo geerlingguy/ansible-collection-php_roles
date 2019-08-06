@@ -19,3 +19,6 @@
 [submodule "roles/php_redis"]
 	path = roles/php_redis
 	url = git@github.com:geerlingguy/ansible-role-php-redis.git
+[submodule "roles/php_tideways"]
+	path = roles/php_tideways
+	url = git@github.com:geerlingguy/ansible-role-php-tideways.git
