@@ -10,3 +10,6 @@
 [submodule "roles/php_pear"]
 	path = roles/php_pear
 	url = git@github.com:geerlingguy/ansible-role-php-pear.git
+[submodule "roles/php_pecl"]
+	path = roles/php_pecl
+	url = git@github.com:geerlingguy/ansible-role-php-pecl.git
