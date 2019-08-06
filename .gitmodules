@@ -4,3 +4,6 @@
 [submodule "roles/php_memcached"]
 	path = roles/php_memcached
 	url = git@github.com:geerlingguy/ansible-role-php-memcached.git
+[submodule "roles/php_mysql"]
+	path = roles/php_mysql
+	url = git@github.com:geerlingguy/ansible-role-php-mysql.git
