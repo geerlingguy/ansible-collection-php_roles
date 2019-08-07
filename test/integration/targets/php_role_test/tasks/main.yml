@@ -1,0 +1,44 @@
+- name: Update apt cache.
+  apt:
+    update_cache: true
+    cache_valid_time: 600
+  when: ansible_os_family == 'Debian'
+
+- name: Configure universal variables.
+  set_fact:
+    php_enable_webserver: false
+    php_default_version_debian: "7.0"
+
+- name: Configure variables for RHEL/CentOS 7.
+  set_fact:
+    php_expected_version: "5.4"
+  when:
+    - ansible_os_family == 'RedHat'
+    - ansible_distribution_version == '7'
+
+- name: Configure variables for Ubuntu 18.04.
+  set_fact:
+    php_default_version_debian: "7.2"
+    php_expected_version: "7.2"
+  when:
+    - ansible_os_family == 'Debian'
+    - ansible_distribution_version == '18.04'
+
+- name: Run the PHP role.
+  include_role:
+    name: geerlingguy.php_roles.php
+
+- name: Test the PHP role's idempotence.
+  include_role:
+    name: geerlingguy.php_roles.php
+
+# TODO: Actually verify idempotence.
+
+# Verify PHP is installed with the correct version.
+- name: Run the PHP version command.
+  command: php -v
+  register: php_version_command
+
+- name: Verify PHP is installed with the correct version.
+  assert:
+    that: php_expected_version in php_version_command.stdout

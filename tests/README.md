@@ -1,3 +1,0 @@
-# PHP Collection Tests
-
-TODO.

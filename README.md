@@ -1,5 +1,7 @@
 # PHP Roles Collection for Ansible
 
+[![Build Status](https://travis-ci.com/geerlingguy/ansible-collection-php_roles.svg?branch=master)](https://travis-ci.com/geerlingguy/ansible-collection-php_roles)
+
 This collection contains all the PHP-related roles maintained by Jeff Geerling (geerlingguy).
 
 It includes:
@@ -42,13 +44,13 @@ Then you can use the roles from the collection in your playbooks:
 
 Currently, all the PHP roles (inside `roles/`) are Git submodules, and work on the roles themselves should take place in the upstream Role repository. At some point, the roles might move into this repository for their canonical home.
 
-This collection has some integration-level tests (inside `tests/`), however, which pull all the roles together and ensure they work in tandem on the latest supported platforms.
+This collection has some integration tests (inside `test/`), however, which pull all the roles together and ensure they work in tandem on the latest supported platforms.
 
-The integrated tests use `molecule`, which can be installed via `pip install molecule`.
+The integrated tests use `ansible-test`. You can run them with the following command:
 
-To build a local test environment and run the tests, run the following command:
+    ansible-test integration --docker geerlingguy/docker-ubuntu1804-ansible
 
-    TODO.
+> Note: You can switch out `ubuntu1804` with any other supported operating system (e.g. `centos7`).
 
 ### Pushing a new version
 
