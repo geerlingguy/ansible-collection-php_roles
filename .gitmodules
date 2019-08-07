@@ -1,33 +1,33 @@
 [submodule "roles/php"]
 	path = roles/php
-	url = git@github.com:geerlingguy/ansible-role-php.git
+	url = https://github.com/geerlingguy/ansible-role-php.git
 [submodule "roles/php_memcached"]
 	path = roles/php_memcached
-	url = git@github.com:geerlingguy/ansible-role-php-memcached.git
+	url = https://github.com/geerlingguy/ansible-role-php-memcached.git
 [submodule "roles/php_mysql"]
 	path = roles/php_mysql
-	url = git@github.com:geerlingguy/ansible-role-php-mysql.git
+	url = https://github.com/geerlingguy/ansible-role-php-mysql.git
 [submodule "roles/php_pear"]
 	path = roles/php_pear
-	url = git@github.com:geerlingguy/ansible-role-php-pear.git
+	url = https://github.com/geerlingguy/ansible-role-php-pear.git
 [submodule "roles/php_pecl"]
 	path = roles/php_pecl
-	url = git@github.com:geerlingguy/ansible-role-php-pecl.git
+	url = https://github.com/geerlingguy/ansible-role-php-pecl.git
 [submodule "roles/php_pgsql"]
 	path = roles/php_pgsql
-	url = git@github.com:geerlingguy/ansible-role-php-pgsql.git
+	url = https://github.com/geerlingguy/ansible-role-php-pgsql.git
 [submodule "roles/php_redis"]
 	path = roles/php_redis
-	url = git@github.com:geerlingguy/ansible-role-php-redis.git
+	url = https://github.com/geerlingguy/ansible-role-php-redis.git
 [submodule "roles/php_tideways"]
 	path = roles/php_tideways
-	url = git@github.com:geerlingguy/ansible-role-php-tideways.git
+	url = https://github.com/geerlingguy/ansible-role-php-tideways.git
 [submodule "roles/php_versions"]
 	path = roles/php_versions
-	url = git@github.com:geerlingguy/ansible-role-php-versions.git
+	url = https://github.com/geerlingguy/ansible-role-php-versions.git
 [submodule "roles/php_xdebug"]
 	path = roles/php_xdebug
-	url = git@github.com:geerlingguy/ansible-role-php-xdebug.git
+	url = https://github.com/geerlingguy/ansible-role-php-xdebug.git
 [submodule "roles/php_xhprof"]
 	path = roles/php_xhprof
-	url = git@github.com:geerlingguy/ansible-role-php-xhprof.git
+	url = https://github.com/geerlingguy/ansible-role-php-xhprof.git
