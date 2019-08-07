@@ -12,17 +12,16 @@ env:
 
 install:
   # Install Ansible from source (only devel has ansible-test currently).
+  - cd ../
   - git clone https://github.com/ansible/ansible.git
   - cd ansible
   - source ./hacking/env-setup
+  - cd ../
 
 before_script:
   # Move the collection into the required path to make ansible-test work.
-  - cd ../
-  - ls
   - mkdir -p ansible_collections/$COLLECTION_NAMESPACE
   - mv ansible-collection-$COLLECTION_NAME ansible_collections/$COLLECTION_NAMESPACE/$COLLECTION_NAME
-  - ls ansible_collections/$COLLECTION_NAMESPACE/$COLLECTION_NAME
   - cd ansible_collections/$COLLECTION_NAMESPACE/$COLLECTION_NAME
 
 script:
