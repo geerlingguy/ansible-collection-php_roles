@@ -26,7 +26,7 @@ tags:
   - drupal
   - wordpress
   - laravel
-repository: https://github.com/geerlingguy/ansible-collection-php
-documentation: https://github.com/geerlingguy/ansible-collection-php
+repository: https://github.com/geerlingguy/ansible-collection-php_roles
+documentation: https://github.com/geerlingguy/ansible-collection-php_roles
 # homepage: ""
-issues: https://github.com/geerlingguy/ansible-collection-php/issues
+issues: https://github.com/geerlingguy/ansible-collection-php_roles/issues
