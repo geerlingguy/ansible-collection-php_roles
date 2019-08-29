@@ -1,2 +1,2 @@
 *.tar.gz
-tests/output
+test/results
