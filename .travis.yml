@@ -11,12 +11,8 @@ env:
     - DISTRO: ubuntu1804
 
 install:
-  # Install Ansible from source (only devel has ansible-test currently).
-  - cd ../
-  - git clone https://github.com/ansible/ansible.git
-  - cd ansible
-  - source ./hacking/env-setup
-  - cd ../
+  # Install Ansible.
+  - pip install ansible
 
 before_script:
   # Move the collection into the required path to make ansible-test work.
