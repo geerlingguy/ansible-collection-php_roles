@@ -2,7 +2,7 @@
 namespace: geerlingguy
 name: php_roles
 description: An elegant collection of roles for PHP automation.
-version: "0.9.3"
+version: "0.9.4"
 readme: README.md
 authors:
   - geerlingguy (https://www.jeffgeerling.com/)
