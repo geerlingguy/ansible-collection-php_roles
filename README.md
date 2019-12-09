@@ -58,8 +58,8 @@ Currently the process of building and pushing a new version artifact to Galaxy i
 
   1. Update all the git submodules: `git submodule update --recursive --remote`
   1. Push the changes, make sure the CI build is still passing.
-  1. If CI passes, tag a new version in the git repository and push it.
-  1. Make sure the `version` string in `galaxy.yml` matches the version of the collection you wish to publish (should correspond to the latest Git tag).
+  1. If CI passes, update the `version` string in `galaxy.yml` to match the version of the collection you wish to publish.
+  1. Tag the new version in the git repository and push it.
   1. Build the collection artifact: `ansible-galaxy collection build`
   1. Publish the collection artifact: `ansible-galaxy collection publish ./geerlingguy-php_roles-1.2.3.tar.gz --api-key=[key goes here]`
 
