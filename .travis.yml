@@ -8,9 +8,7 @@ env:
     - COLLECTION_NAME: php_roles
   matrix:
     - DISTRO: centos7
-      PYTHON_INTERPRETER: /usr/bin/python
     - DISTRO: ubuntu1804
-      PYTHON_INTERPRETER: /usr/bin/python3
 
 install:
   # Install Ansible.
@@ -25,4 +23,4 @@ before_script:
 
 script:
   # Run tests.
-  - ansible-test integration --docker geerlingguy/docker-$DISTRO-ansible --python-interpreter $PYTHON_INTERPRETER
+  - ansible-test integration --docker geerlingguy/docker-$DISTRO-ansible --python-interpreter /usr/bin/python3
