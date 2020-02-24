@@ -8,9 +8,11 @@ env:
     - COLLECTION_NAME: php_roles
   matrix:
     - DISTRO: centos7
+      TAG: python2
       PYTHON_INTERPRETER: /usr/bin/python3
       PYTHON_VERSION: '3.6'
     - DISTRO: ubuntu1804
+      TAG: latest
       PYTHON_INTERPRETER: /usr/bin/python3
       PYTHON_VERSION: '3.6'
 
@@ -27,4 +29,4 @@ before_script:
 
 script:
   # Run tests.
-  - ansible-test integration --docker geerlingguy/docker-$DISTRO-ansible --python $PYTHON_VERSION --python-interpreter $PYTHON_INTERPRETER
+  - ansible-test integration --docker geerlingguy/docker-$DISTRO-ansible:$TAG --python $PYTHON_VERSION --python-interpreter $PYTHON_INTERPRETER
