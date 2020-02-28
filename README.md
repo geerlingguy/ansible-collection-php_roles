@@ -44,7 +44,7 @@ Then you can use the roles from the collection in your playbooks:
 
 Currently, all the PHP roles (inside `roles/`) are Git submodules, and work on the roles themselves should take place in the upstream Role repository. At some point, the roles might move into this repository for their canonical home.
 
-This collection has some integration tests (inside `test/`), however, which pull all the roles together and ensure they work in tandem on the latest supported platforms.
+This collection has some integration tests (inside `tests/`), however, which pull all the roles together and ensure they work in tandem on the latest supported platforms.
 
 The integrated tests use `ansible-test`. You can run them with the following command:
 
@@ -54,16 +54,11 @@ The integrated tests use `ansible-test`. You can run them with the following com
 
 ### Pushing a new version
 
-Currently the process of building and pushing a new version artifact to Galaxy is manual. This process will be automated based on tags/releases via Travis CI soon, but for now, here is how to release a new version:
+Before tagging a new version, make sure all the git submodules are up to date (`git submodule update --recursive --remote` and then commit and push all changes), and make sure all tests are passing.
 
-  1. Update all the git submodules: `git submodule update --recursive --remote`
-  1. Push the changes, make sure the CI build is still passing.
-  1. If CI passes, update the `version` string in `galaxy.yml` to match the version of the collection you wish to publish.
-  1. Tag the new version in the git repository and push it.
-  1. Build the collection artifact: `ansible-galaxy collection build`
-  1. Publish the collection artifact: `ansible-galaxy collection publish ./geerlingguy-php_roles-1.2.3.tar.gz --api-key=[key goes here]`
+Then tag the new version of the collection and push the tag.
 
-> Note: The above commands require Ansible 2.9 or later.
+Once pushed, if tests pass, Travis CI will deploy the new collection version using the playbook in `scripts/deploy.yml`. That directory also contains the `galaxy.yml` template that will be used to build the collection metadata.
 
 ## Author
 
