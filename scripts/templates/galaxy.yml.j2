@@ -2,7 +2,7 @@
 namespace: geerlingguy
 name: php_roles
 description: An elegant collection of roles for PHP automation.
-version: "0.9.5"
+version: "{{ tag }}"
 readme: README.md
 authors:
   - geerlingguy (https://www.jeffgeerling.com/)
@@ -30,3 +30,7 @@ repository: https://github.com/geerlingguy/ansible-collection-php_roles
 documentation: https://github.com/geerlingguy/ansible-collection-php_roles
 # homepage: ""
 issues: https://github.com/geerlingguy/ansible-collection-php_roles/issues
+build_ignore:
+  - scripts
+  - tests
+  - .DS_Store

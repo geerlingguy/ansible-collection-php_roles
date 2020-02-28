@@ -8,10 +8,8 @@ env:
     - COLLECTION_NAME: php_roles
   matrix:
     - DISTRO: centos7
-      TAG: python2
       PYTHON_INTERPRETER: /usr/bin/python
     - DISTRO: ubuntu1804
-      TAG: latest
       PYTHON_INTERPRETER: /usr/bin/python3
 
 install:
@@ -27,4 +25,10 @@ before_script:
 
 script:
   # Run tests.
-  - ansible-test integration --docker geerlingguy/docker-$DISTRO-ansible:$TAG --python-interpreter $PYTHON_INTERPRETER
+  - ansible-test integration --docker geerlingguy/docker-$DISTRO-ansible:latest --python-interpreter $PYTHON_INTERPRETER
+
+deploy:
+  provider: script
+  script: ansible-playbook -i 'localhost,' scripts/deploy.yml -e "tag=$TRAVIS_TAG"
+  'on':
+    tags: true
