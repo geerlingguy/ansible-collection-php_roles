@@ -54,7 +54,11 @@ The integrated tests use `ansible-test`. You can run them with the following com
 
 ### Pushing a new version
 
-Before tagging a new version, make sure all the git submodules are up to date (`git submodule update --recursive --remote` and then commit and push all changes), and make sure all tests are passing.
+Before tagging a new version, make sure all the git submodules are up to date:
+
+    git submodule update --recursive --remote
+
+Then commit and push all changes, and make sure all tests are passing.
 
 Then tag the new version of the collection and push the tag.
 
