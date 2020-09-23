@@ -6,8 +6,6 @@ env:
   global:
     - COLLECTION_NAMESPACE: geerlingguy
     - COLLECTION_NAME: php_roles
-    - PY_COLORS: '1'
-    - ANSIBLE_FORCE_COLOR: '1'
   matrix:
     - DISTRO: centos7
       PYTHON_INTERPRETER: /usr/bin/python
@@ -27,7 +25,7 @@ before_script:
 
 script:
   # Run tests.
-  - ansible-test integration --docker geerlingguy/docker-$DISTRO-ansible:latest --python-interpreter $PYTHON_INTERPRETER
+  - ansible-test --color integration --docker geerlingguy/docker-$DISTRO-ansible:latest --python-interpreter $PYTHON_INTERPRETER
 
 deploy:
   provider: script
