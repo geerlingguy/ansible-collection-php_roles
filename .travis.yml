@@ -25,7 +25,7 @@ before_script:
 
 script:
   # Run tests.
-  - ansible-test --color integration --docker geerlingguy/docker-$DISTRO-ansible:latest --python-interpreter $PYTHON_INTERPRETER
+  - ansible-test integration --color --docker geerlingguy/docker-$DISTRO-ansible:latest --python-interpreter $PYTHON_INTERPRETER
 
 deploy:
   provider: script
