@@ -6,6 +6,8 @@ env:
   global:
     - COLLECTION_NAMESPACE: geerlingguy
     - COLLECTION_NAME: php_roles
+    - PY_COLORS: '1'
+    - ANSIBLE_FORCE_COLOR: '1'
   matrix:
     - DISTRO: centos7
       PYTHON_INTERPRETER: /usr/bin/python
