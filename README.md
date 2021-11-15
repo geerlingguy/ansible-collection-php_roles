@@ -34,7 +34,7 @@ Then you can use the roles from the collection in your playbooks:
     
       roles:
         - php
-        - role: php-versions
+        - role: php_versions
           vars:
             php_version: '7.3'
 
