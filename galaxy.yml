@@ -1,0 +1,30 @@
+namespace: geerlingguy
+name: php_roles
+version: 1.0.0
+readme: README.md
+authors:
+  - geerlingguy (https://www.jeffgeerling.com/)
+description: An elegant collection of roles for PHP automation.
+license:
+  - MIT
+dependencies: {}
+repository: https://github.com/geerlingguy/ansible-collection-php_roles
+documentation: https://github.com/geerlingguy/ansible-collection-php_roles
+issues: https://github.com/geerlingguy/ansible-collection-php_roles/issues
+tags:
+  - php
+  - apache
+  - lamp
+  - lemp
+  - nginx
+  - apache
+  - debian
+  - ubuntu
+  - centos
+  - amazon
+  - linux
+  - rhel
+  - fedora
+  - drupal
+  - wordpress
+  - laravel
