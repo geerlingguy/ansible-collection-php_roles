@@ -1,0 +1,8 @@
+skip_list:
+  - no-changed-when
+  - risky-file-permissions
+  - yaml
+  - fqcn[action-core]
+  - name[template]
+
+verbosity: 1
