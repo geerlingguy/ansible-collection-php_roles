@@ -1,4 +1,5 @@
 skip_list:
+  - no-changed-when
   - risky-file-permissions
   - yaml
   - fqcn-builtins
