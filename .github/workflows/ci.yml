@@ -20,13 +20,21 @@ jobs:
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v2
+        with:
+          path: ansible_collections/geerlingguy/php_roles
 
-      # Needed so lint can scan all the git submodule dirs.
-      - name: Allow all submodules to be scanned.
-        run: git config --global --add safe.directory /github/workspace
+      - name: Set up Python 3.
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-      - name: Run ansible-lint.
-        uses: ansible-community/ansible-lint-action@main
+      - name: Install test dependencies.
+        run: pip3 install yamllint ansible-core ansible-lint
+
+      - name: Lint code.
+        run: |
+          yamllint .
+          ansible-lint
 
   integration:
     name: Integration
