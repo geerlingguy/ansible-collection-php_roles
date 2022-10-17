@@ -21,6 +21,10 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
 
+      # Needed so lint can scan all the git submodule dirs.
+      - name: Allow all submodules to be scanned.
+        run: git config --global --add safe.directory /github/workspace
+
       - name: Run ansible-lint.
         uses: ansible-community/ansible-lint-action@main
 
