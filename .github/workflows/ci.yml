@@ -39,6 +39,13 @@ jobs:
   integration:
     name: Integration
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - distro: centos7
+            python_interpreter: /usr/bin/python
+          - distro: ubuntu1804
+            python_interpreter: /usr/bin/python3
 
     steps:
       - name: Check out the codebase.
@@ -59,5 +66,5 @@ jobs:
       - name: Run Ansible tests.
         run: >
           ansible-test integration --color
-          --docker geerlingguy/docker-ubuntu2004-ansible:latest
-          --python 3
+          --docker geerlingguy/docker-${{ matrix.distro }}-ansible:latest
+          --python ${{ matrix.python_interpreter }}
