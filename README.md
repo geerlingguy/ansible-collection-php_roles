@@ -1,6 +1,8 @@
 # PHP Roles Collection for Ansible
 
-[![Build Status](https://travis-ci.com/geerlingguy/ansible-collection-php_roles.svg?branch=master)](https://travis-ci.com/geerlingguy/ansible-collection-php_roles)
+[![MIT licensed][badge-license]][link-license]
+[![Galaxy Collection][badge-collection]][link-galaxy]
+[![CI][badge-gh-actions]][link-gh-actions]
 
 This collection contains all the PHP-related roles maintained by Jeff Geerling (geerlingguy).
 
@@ -26,17 +28,19 @@ Install this collection locally:
 
 Then you can use the roles from the collection in your playbooks:
 
-    ---
-    - hosts: all
-    
-      collections:
-        - geerlingguy.php_roles
-    
-      roles:
-        - php
-        - role: php-versions
-          vars:
-            php_version: '7.3'
+```yaml
+---
+- hosts: all
+
+  collections:
+    - geerlingguy.php_roles
+
+  roles:
+    - php
+    - role: php-versions
+      vars:
+        php_version: '7.3'
+```
 
 > If you want to be more explicit, you can use the fully-qualified role name when referring to a role in this collection, like `geerlingguy.php_roles.php` instead of just `php`. This could be helpful if, for example, you maintain a separate `php` role in another place on your local workstation.
 
@@ -48,7 +52,9 @@ This collection has some integration tests (inside `tests/`), however, which pul
 
 The integrated tests use `ansible-test`. You can run them with the following command:
 
-    ansible-test integration --docker geerlingguy/docker-ubuntu1804-ansible
+```
+ansible-test integration --docker geerlingguy/docker-ubuntu1804-ansible
+```
 
 > Note: You can switch out `ubuntu1804` with any other supported operating system (e.g. `centos7`).
 
@@ -56,14 +62,24 @@ The integrated tests use `ansible-test`. You can run them with the following com
 
 Before tagging a new version, make sure all the git submodules are up to date:
 
-    git submodule update --recursive --remote
+```
+git submodule update --recursive --remote
+```
 
 Then commit and push all changes, and make sure all tests are passing.
 
 Then tag the new version of the collection and push the tag.
 
-Once pushed, if tests pass, Travis CI will deploy the new collection version using the playbook in `scripts/deploy.yml`. That directory also contains the `galaxy.yml` template that will be used to build the collection metadata.
+Once pushed, GitHub actions will run the `galaxy-deploy.yml` playbook to deploy the new version.
 
 ## Author
 
 This collection was created in 2019 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/) and [Ansible for Kubernetes](https://www.ansibleforkubernetes.com).
+
+[badge-gh-actions]: https://github.com/geerlingguy/ansible-collection-php_roles/workflows/CI/badge.svg?event=push
+[link-gh-actions]: https://github.com/geerlingguy/ansible-collection-php_roles/actions?query=workflow%3ACI
+[badge-collection]: https://img.shields.io/badge/collection-geerlingguy.php_roles-blue
+[link-galaxy]: https://galaxy.ansible.com/geerlingguy/php_roles
+[badge-license]: https://img.shields.io/github/license/geerlingguy/ansible-collection-php_roles.svg
+[link-license]: https://github.com/geerlingguy/ansible-collection-php_roles/blob/master/LICENSE
+[badge-gh-actions]: https://github.com/geerlingguy/ansible-role-homebrew/workflows/CI/badge.svg?event=push
