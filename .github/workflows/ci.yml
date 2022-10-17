@@ -60,3 +60,4 @@ jobs:
         run: >
           ansible-test integration --color
           --docker geerlingguy/docker-ubuntu2004-ansible:latest
+          --python 3.9
