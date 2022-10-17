@@ -2,5 +2,5 @@ skip_list:
   - no-changed-when
   - risky-file-permissions
   - yaml
-  - fqcn-builtins
+  - fqcn[action-core]
   - name[template]
