@@ -56,13 +56,6 @@ jobs:
           pip3 install ansible molecule[docker] docker
           ansible-galaxy collection install community.general
 
-      - name: Run Molecule tests.
-        run: molecule test
-        env:
-          PY_COLORS: '1'
-          ANSIBLE_FORCE_COLOR: '1'
-          MOLECULE_DISTRO: ${{ matrix.distro }}
-
       - name: Run Ansible tests.
         run: >
           ansible-test integration --color
