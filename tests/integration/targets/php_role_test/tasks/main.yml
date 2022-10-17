@@ -33,6 +33,7 @@
 # Verify PHP is installed with the correct version.
 - name: Run the PHP version command.
   ansible.builtin.command: php -v
+  changed_when: false
   register: php_version_command
 
 - name: Verify PHP is installed with the correct version.
