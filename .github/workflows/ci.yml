@@ -66,5 +66,4 @@ jobs:
       - name: Run Ansible tests.
         run: >
           ansible-test integration --color
-          --docker geerlingguy/docker-${{ matrix.distro }}-ansible:latest
-          --python ${{ matrix.python_interpreter }}
+          --docker ubuntu2004
