@@ -23,18 +23,8 @@ jobs:
         with:
           path: ansible_collections/geerlingguy/php_roles
 
-      - name: Set up Python 3.
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Install test dependencies.
-        run: pip3 install yamllint ansible-core ansible-lint
-
-      - name: Lint code.
-        run: |
-          yamllint .
-          ansible-lint
+      - name: Run ansible-lint.
+        uses: ansible-community/ansible-lint-action@main
 
   integration:
     name: Integration
