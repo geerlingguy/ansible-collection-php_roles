@@ -1,5 +1,7 @@
 # PHP Roles Collection for Ansible
 
+**DEPRECATED**: Due to the maintenance burden of trying to manage this collection in addition to the `php_*` roles, and my inability to move everything into the `geerlingguy.php` namespace, I have deprecated this collection and recommend you use my `php_*` roles (e.g. `geerlingguy.php`, `geerlingguy.php_version`, etc.) individually instead.
+
 [![MIT licensed][badge-license]][link-license]
 [![Galaxy Collection][badge-collection]][link-galaxy]
 [![CI][badge-gh-actions]][link-gh-actions]
